@@ -1,0 +1,46 @@
+﻿@model GuestResponse
+
+@{
+    ViewData["Title"] = "RSVP Form";
+}
+
+<h1>RSVP</h1>
+<body>
+    <h5 class="bg-primary text-white text-center m-2 p-2">RSVP</h5>
+    <form asp-action="RsvpForm" method="post" class="m-2">
+        <div asp-validation-summary="All"></div>
+        <div class="">
+            <label asp-for="Name">Your name:</label>
+        </div>
+        <div>
+            <input asp-for="Name" style="width: 350px; background-color: #ffffcc;" />
+        </div>
+        <div class="form-group">
+            <div class="">
+                <label asp-for="GuestAge">Your age:</label>
+            </div>
+            <div>
+                <input asp-for="GuestAge" style="width: 350px; background-color: #ffffcc;" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="">
+                <label asp-for="ArrivalTime">Arrival time:</label>
+            </div>
+            <div>
+                <input asp-for="ArrivalTime" style="width: 350px; background-color: #ffffcc;" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="">
+                <label asp-for="ReqParking">Request parking?:</label>
+            </div>
+            <div>
+                <input asp-for="ReqParking" style="width: 350px; background-color: #ffffcc;" />
+            </div>
+        </div>
+        <button type="button" style="background-color:blue">
+            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="ThankYou">Submit RSVP</a>
+        </button>
+    </form>
+</body>
